@@ -61,11 +61,11 @@
         rgb_layer {
             display-name = "RGB";
             bindings = <
-                &none  &none            &none           &none            &none           &none            &none  &none  &none            &none           &none            &none           &none            &none
-                &none  &none            &none           &none            &none           &none            &none  &none  &none            &none           &none            &none           &none            &none
-                &none  &none            &none           &none            &none           &none            &none  &none  &none            &none           &none            &none           &none            &none
-                &none  &none            &none           &none            &none           &none            &none  &none  &none            &none           &none            &none           &none            &none
-                                                        &rgb_ug RGB_TOG  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &none  &none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_TOG
+                &none  &none  &none  &none  &none            &none           &studio_unlock   &none  &none  &none            &none           &none           &none            &none
+                &none  &none  &none  &none  &none            &none           &none            &none  &none  &none            &none           &none           &none            &none
+                &none  &none  &none  &none  &none            &none           &none            &none  &none  &none            &none           &none           &none            &none
+                &none  &none  &none  &none  &none            &none           &none            &none  &none  &none            &none           &none           &none            &none
+                                            &rgb_ug RGB_TOG  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &none  &none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_TOG
             >;
         };
 
