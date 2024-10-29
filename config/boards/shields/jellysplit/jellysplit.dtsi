@@ -6,7 +6,7 @@
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk.matrix_transform = &default_transform;
+        zmk,physical-layout = &jellysplit_physical_layout;
     };
 
     default_transform: matrix_transform {
@@ -23,8 +23,6 @@
         >;
     };
 
-    
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
@@ -36,7 +34,83 @@
                     <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
+
+    jellysplit_physical_layout: jellysplit_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "JellySplit";
+
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    8   54       0     0     0>
+            , <&key_physical_attrs 100 100  108   27       0     0     0>
+            , <&key_physical_attrs 100 100  208   12       0     0     0>
+            , <&key_physical_attrs 100 100  308    0       0     0     0>
+            , <&key_physical_attrs 100 100  409   25       0     0     0>
+            , <&key_physical_attrs 100 100  509   40       0     0     0>
+            , <&key_physical_attrs 100 100  609   53       0     0     0>
+            , <&key_physical_attrs 100 100  957   53       0     0     0>
+            , <&key_physical_attrs 100 100 1057   40       0     0     0>
+            , <&key_physical_attrs 100 100 1157   25       0     0     0>
+            , <&key_physical_attrs 100 100 1257    0       0     0     0>
+            , <&key_physical_attrs 100 100 1358   12       0     0     0>
+            , <&key_physical_attrs 100 100 1458   27       0     0     0>
+            , <&key_physical_attrs 100 100 1558   54       0     0     0>
+            , <&key_physical_attrs 100 100    8  154       0     0     0>
+            , <&key_physical_attrs 100 100  108  127       0     0     0>
+            , <&key_physical_attrs 100 100  208  112       0     0     0>
+            , <&key_physical_attrs 100 100  308  100       0     0     0>
+            , <&key_physical_attrs 100 100  409  125       0     0     0>
+            , <&key_physical_attrs 100 100  509  140       0     0     0>
+            , <&key_physical_attrs 100 100  609  154       0     0     0>
+            , <&key_physical_attrs 100 100  957  154       0     0     0>
+            , <&key_physical_attrs 100 100 1057  140       0     0     0>
+            , <&key_physical_attrs 100 100 1157  125       0     0     0>
+            , <&key_physical_attrs 100 100 1257  100       0     0     0>
+            , <&key_physical_attrs 100 100 1358  112       0     0     0>
+            , <&key_physical_attrs 100 100 1458  127       0     0     0>
+            , <&key_physical_attrs 100 100 1558  154       0     0     0>
+            , <&key_physical_attrs 100 100    8  254       0     0     0>
+            , <&key_physical_attrs 100 100  108  227       0     0     0>
+            , <&key_physical_attrs 100 100  208  212       0     0     0>
+            , <&key_physical_attrs 100 100  308  200       0     0     0>
+            , <&key_physical_attrs 100 100  409  226       0     0     0>
+            , <&key_physical_attrs 100 100  509  241       0     0     0>
+            , <&key_physical_attrs 100 100  609  254       0     0     0>
+            , <&key_physical_attrs 100 100  957  254       0     0     0>
+            , <&key_physical_attrs 100 100 1057  241       0     0     0>
+            , <&key_physical_attrs 100 100 1157  226       0     0     0>
+            , <&key_physical_attrs 100 100 1257  200       0     0     0>
+            , <&key_physical_attrs 100 100 1358  212       0     0     0>
+            , <&key_physical_attrs 100 100 1458  227       0     0     0>
+            , <&key_physical_attrs 100 100 1558  254       0     0     0>
+            , <&key_physical_attrs 100 100    0  364 (-1500)    50   414>
+            , <&key_physical_attrs 100 100  108  328       0     0     0>
+            , <&key_physical_attrs 100 100  208  312       0     0     0>
+            , <&key_physical_attrs 100 100  308  301       0     0     0>
+            , <&key_physical_attrs 100 100  409  326       0     0     0>
+            , <&key_physical_attrs 100 100  509  341       0     0     0>
+            , <&key_physical_attrs 100 100  609  354       0     0     0>
+            , <&key_physical_attrs 100 100  957  354       0     0     0>
+            , <&key_physical_attrs 100 100 1057  341       0     0     0>
+            , <&key_physical_attrs 100 100 1157  326       0     0     0>
+            , <&key_physical_attrs 100 100 1257  301       0     0     0>
+            , <&key_physical_attrs 100 100 1358  312       0     0     0>
+            , <&key_physical_attrs 100 100 1458  328       0     0     0>
+            , <&key_physical_attrs 100 100 1566  364    1500  1616   414>
+            , <&key_physical_attrs 100 100  363  433  (-500)   413   483>
+            , <&key_physical_attrs 100 100  475  438    1000   525   488>
+            , <&key_physical_attrs 100 100  582  472    2500   632   522>
+            , <&key_physical_attrs 100 100  677  532    4000   727   582>
+            , <&key_physical_attrs 100 100  889  532 (-4000)   939   582>
+            , <&key_physical_attrs 100 100  984  472 (-2500)  1034   522>
+            , <&key_physical_attrs 100 100 1091  438 (-1000)  1141   488>
+            , <&key_physical_attrs 100 100 1203  433     500  1253   483>
+            ;
+    };
 };
+
 
 &pro_micro_i2c {
     status = "okay";
